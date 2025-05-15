@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heimishe Recipes</title>
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="icon" href="images/icons.png" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <h1>Heimishe Recipes</h1>
+  </header>
+  <div class="container">
+    <div class="button-bar">
+      <button id="home-button">Home</button>
+      <button id="add-recipe-button">Add Recipe</button>
+      <button id="delete-recipe" class="hidden">Delete</button>
+      <button id="edit-recipe" class="hidden">Edit</button>
+    </div>
+    <select id="recipes">
+      <option hidden>Pick a recipe</option>
+    </select>
+
+    <div class="has-recipe hidden content">
+      <div id="left-side">
+        <h2 id="name"></h2>
+        <img id="picture" alt="Recipe Picture" />
+      </div>
+      <div id="right-side">
+        <div id="ingredients-container">
+          <h4>Ingredients:</h4> 
+          <ul id="ingredients"></ul>
+        </div>
+        <div id="directions-container">
+          <h4>Directions:</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="no-recipe">
+      <h5 id="error"></h5>
+      Please select a delicious recipe
+    </div>
+
+    <div id="recipe-form-container" class="hidden">
+      <h3 id="form-title">Add a New Recipe</h3>
+      <form id="recipe-form" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="recipe-name">Name:</label>
+          <input type="text" id="recipe-name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="recipe-category">Category:</label>
+          <input type="text" id="recipe-category" name="category" required />
+        </div>
+        <div class="form-group">
+          <label for="recipe-ingredients">Ingredients (comma-separated):</label>
+          <input type="text" id="recipe-ingredients" name="ingredients" required />
+        </div>
+        <div class="form-group">
+          <label for="recipe-directions">Directions:</label>
+          <textarea id="recipe-directions" name="directions" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="recipe-image">Upload Picture:</label>
+          <input type="file" id="recipe-image" name="image" />
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button" id="cancel-button">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Heimishe Recipes. All rights reserved.</p>
+  </footer>
+  <script src="javascripts/recipes.js"></script>
+</body>
+
+</html>

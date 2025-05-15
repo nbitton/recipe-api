@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #4285f4;
+  color: #fff;
+  padding: 1em 0;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+button, select, input, textarea {
+  font-family: inherit;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+}
+
+button {
+  background: #4285f4;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #357ae8;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.button-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+select {
+  margin-bottom: 1em; 
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em 0; 
+}
+
+#left-side, #right-side {
+  padding: 1em;
+  border-radius: 8px;
+}
+
+#left-side {
+  flex: 1;
+  max-width: 33%;
+  text-align: left;
+}
+
+#right-side {
+  flex: 2;
+  max-width: 67%;
+  text-align: left;
+  padding-left: 1em;
+  border-left: 1px solid #ddd; 
+}
+
+#ingredients-container, #directions-container {
+  background: #fff;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+#ingredients {
+  list-style-type: none;
+  padding: 0;
+}
+
+#ingredients li {
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+
+#directions-container p {
+  margin: 0.5em 0;
+}
+
+#picture {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  object-fit: contain; 
+}
+
+#recipe-form-container {
+  background: #fff;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+}
+
+.hidden {
+  display: none;
+}
+
+#error {
+  color: red;
+}
+
+footer {
+  background: #4285f4;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  #left-side, #right-side {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+
+  #right-side {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #picture {
+    max-width: 200px;
+  }
+
+  #left-side, #right-side {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+
+  #right-side {
+    border-left: none;
+    padding-left: 0;
+  }
+}
